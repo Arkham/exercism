@@ -23,7 +23,7 @@ class Bob
 
   class LoudAnswer
     def adequate_for(sentence)
-      if sentence.gsub(/[^a-zA-Z]+/, '').match(/^[A-Z]+$/)
+      if sentence.match(/[a-zA-Z]/) && sentence.upcase == sentence
         'Woah, chill out!'
       end
     end
@@ -31,7 +31,7 @@ class Bob
 
   class QuestionAnswer
     def adequate_for(sentence)
-      if sentence.match(/\?\Z/)
+      if sentence.end_with?('?')
         'Sure.'
       end
     end
