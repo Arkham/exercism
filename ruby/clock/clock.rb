@@ -41,12 +41,8 @@ class Clock
       hour += 1
     end
 
-    if hour < 0
-      hour = 23
-    end
-
-    if hour > 23
-      hour = 0
+    if hour < 0 || hour > 23
+      hour %= 24
     end
 
     [hour, minute]
