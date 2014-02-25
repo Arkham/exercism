@@ -37,4 +37,8 @@ class TrinaryTest < MiniTest::Unit::TestCase
   def test_invalid_trinary_is_decimal_0
     assert_equal 0, Trinary.new("carrot").to_decimal
   end
+
+  def test_invalid_trinary_is_decimal_0
+    assert_equal 0, Trinary.new("abc1").to_decimal
+  end
 end
