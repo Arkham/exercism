@@ -23,8 +23,6 @@ class Proverb
   end
 
   def wants_couples
-    first = wants[0..-2]
-    second = wants[1..-1]
-    first.zip(second)
+    wants.each_cons(2).to_a
   end
 end
