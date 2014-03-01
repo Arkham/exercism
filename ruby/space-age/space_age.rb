@@ -16,7 +16,7 @@ class SpaceAge
     neptune: 164.79132
   }
 
-  EARTH_PERIOD_IN_SECONDS = 31557600
+  EARTH_PERIOD_IN_SECONDS = 31_557_600
 
   PLANET_PERIODS_IN_SECONDS = Hash[
     PLANET_PERIODS.map do |planet, period|
