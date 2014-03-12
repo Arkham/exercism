@@ -33,10 +33,15 @@ class Robot
   end
 
   def random_letters
-    ('A'..'Z').to_a.sample(2).join
+    random_chars_from_alphabet('A'..'Z', size: 2)
   end
 
   def random_numbers
-    (0..9).to_a.sample(3).join
+    random_chars_from_alphabet(0..9, size: 3)
+  end
+
+  def random_chars_from_alphabet(alphabet, size: 0)
+    alphabet = alphabet.to_a if alphabet.is_a? Range
+    alphabet.sample(size).join
   end
 end
