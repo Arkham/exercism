@@ -6,8 +6,6 @@ class Array
   end
 
   def discard
-    self.each_with_object([]) do |elem, result|
-      result << elem unless yield(elem)
-    end
+    keep { |elem| !yield(elem) }
   end
 end
