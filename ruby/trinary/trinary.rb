@@ -6,8 +6,8 @@ class Trinary
   end
 
   def to_decimal
-    digits.reverse.each_with_index.inject(0) do |result, (digit, index)|
-      result + digit * (3 ** index)
-    end
+    digits.reverse.each_with_index.map do |digit, index|
+      digit * (3 ** index)
+    end.inject(0, :+)
   end
 end
